@@ -1,0 +1,38 @@
+*Matrícula de coches matriculados antes del 31 de diciembre de 2007.
+-> select Matricula, FechaMatriculacion FROM vehículos WHERE FechaMatriculacion<"2007-12-31";
+
+*Matrícula de los coches matriculados en 2009.
+-> SELECT matricula, fechamatriculacion FROM vehiculos WHERE FechaMatriculacion<="2009-12-31" AND fechamatriculacion >="2009-01-01";
+
+-> SELECT matricula, fechamatriculacion FROM vehiculos WHERE fechamatriculacion BETWEEN "2009-01-01" AND "2009-12-31";
+
+*Matricula, marca y modelo de los coches que son seat o renault.
+-> SELECT matricula, marca, modelo FROM vehiculos WHERE marca="seat" OR marca="renault";
+
+*Color de todos los coches que no sean "DAEWO".
+-> SELECT color FROM vehiculos WHERE marca!="Daewo";
+
+*Muestra todos los colores diferentes de los coches seat que tenga.
+-> SELECT distinct color FROM vehiculos WHERE marca="seat";
+
+*Nombre y apellidos de clientes de Madrid.
+-> SELECT nombre, apellidos FROM clientes WHERE direccion LIKE "%Madrid".
+
+*Nombre y apellidos de los clientes cuyos primeros 4 numeros del DNI son "0000".
+-> SELECT nombre, apellidos FROM clientes WHERE dni LIKE "0000%";
+
+*Nombre y apellidos de los empleados que son jefes y que fueron dados de alta en el año 2005.
+-> SELECT nombre, apellidos FROM empleados WHERE categoria LIKE "Jefe%" AND fechadealta>="2005-01-01" AND "2005-12-31";
+
+*Matricula de los coches BMW azulados o de los renault grisáceos.
+-> SELECT matricula FROM vehiculos WHERE marca="BMW" LIKE "Azul%" AND marca="Renault" LIKE "Gris%";
+
+*Precio y stock de todos los filtros.
+-> SELECT precio, stock FROM recambios LIKE "Filtro de%";
+
+*Precio de referencia de los recambios que forman parte del freno o que son filtros y tienen un stock menor que 30.
+-> SELECT
+
+
+
+
